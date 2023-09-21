@@ -1,5 +1,5 @@
 #include <ros/ros.h>
-#include "hydraulic_system_monitor.h"
+#include "robot_info/hydraulic_system_monitor.h"
 #include <cstdlib>
 
 HydraulicSystemMonitor::HydraulicSystemMonitor()

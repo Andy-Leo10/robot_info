@@ -11,7 +11,7 @@ protected:
     std::string hydraulic_oil_tank_fill_level = "";
     std::string hydraulic_oil_pressure = "";
 
-protected:
+public:
     int random_number_generator(int min, int max);
     std::string get_hydraulic_oil_temperature();
     std::string get_hydraulic_oil_tank_fill_level();
