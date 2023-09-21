@@ -1,6 +1,7 @@
 #pragma once
 #include <ros/ros.h>
 #include "robot_info/robot_info_class.h"
+#include "robot_info/hydraulic_system_monitor.h"
 
 //inherit the RobotInfo class
 
@@ -14,4 +15,5 @@ class AgvRobotInfo : public RobotInfo
         
     protected:
         std::string maximun_payload="100 Kg";
+        HydraulicSystemMonitor hydraulic_system_monitor;
 };
