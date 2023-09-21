@@ -8,6 +8,8 @@ class RobotInfo
 public:
     RobotInfo();
     RobotInfo(ros::NodeHandle *nh);
+    //my virtual function
+    virtual void publish_data();
 
 protected:
     ros::NodeHandle *nh;
@@ -16,8 +18,7 @@ protected:
     std::string serial_number="567A359";
     std::string ip_address="169.254.5.180";
     std::string firmware_version="3.5.8";
-    //my virtual function
-    virtual void publish_data();
+    
 
 private:
     ros::Publisher robot_pub;
