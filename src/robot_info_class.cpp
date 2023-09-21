@@ -19,3 +19,17 @@ void RobotInfo::init_publisher()
     ros::Rate loop_rate(2);
 }
 
+void RobotInfo::publish_data()
+{
+    robot_msg.data_field_01 = robot_description;
+    robot_msg.data_field_02 = serial_number;
+    robot_msg.data_field_03 = ip_address;
+    robot_msg.data_field_04 = firmware_version;
+    robot_msg.data_field_05 = "-";
+    robot_msg.data_field_06 = "-";
+    robot_msg.data_field_07 = "-";
+    robot_msg.data_field_08 = "-";
+    robot_msg.data_field_09 = "-";
+    robot_msg.data_field_10 = "-";
+    robot_pub.publish(robot_msg);
+}

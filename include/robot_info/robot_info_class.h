@@ -21,6 +21,7 @@ protected:
 
 private:
     ros::Publisher robot_pub;
+    robotinfo_msgs::RobotInfo10Fields robot_msg;
 };
 
 /* looks of the imported message
