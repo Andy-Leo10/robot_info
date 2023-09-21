@@ -11,29 +11,11 @@ RobotInfo::RobotInfo(ros::NodeHandle *nh)
 {
     this->nh = nh;
     init_server();
-    this->robot_pub = nh->advertise<robot_info::RobotInfoMsg>("robot_info", 1);
 }
 
-void RobotInfo::init_server()
+RobotInfo::init_publisher()
 {
-    this->robot_server = nh->advertiseService("robot_info_server", &RobotInfo::server_callback, this);
-}
-
-bool RobotInfo::server_callback(std_srvs::SetBool::Request &req, std_srvs::SetBool::Response &res)
-{
-    if (req.data)
-    {
-        ROS_INFO("RobotInfo: server_callback: true");
-        publish_data();
-        res.success = true;
-        res.message = "RobotInfo: server_callback: true";
-    }
-    else
-    {
-        ROS_INFO("RobotInfo: server_callback: false");
-        res.success = false;
-        res.message = "RobotInfo: server_callback: false";
-    }
-    return true;
+    robot_pub = nh->advertise<robotinfo_msgs::RobotInfo10Fields>("robot_info", 1);
+    ros::Rate loop_rate(2);
 }
 
