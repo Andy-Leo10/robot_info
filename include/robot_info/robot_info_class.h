@@ -1,7 +1,7 @@
 #pragma once
 #include <ros/ros.h>
 #include <std_srvs/SetBool.h>
-#include <advanced_cpp_auxiliary_pkgs/robotinfo_msgs/RobotInfo10Fields.h>
+#include <robotinfo_msgs/RobotInfo10Fields.h>
 
 class RobotInfo
 {
@@ -17,7 +17,7 @@ protected:
     std::string ip_address="169.254.5.180";
     std::string firmware_version="3.5.8";
     //my virtual function
-    virtual void publish_data()=0;
+    virtual void publish_data();
 
 private:
     ros::Publisher robot_pub;
