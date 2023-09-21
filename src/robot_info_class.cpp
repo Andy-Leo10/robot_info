@@ -22,10 +22,10 @@ void RobotInfo::init_publisher()
 void RobotInfo::publish_data()
 {
     ROS_INFO("data published");
-    robot_msg.data_field_01 = robot_description;
-    robot_msg.data_field_02 = serial_number;
-    robot_msg.data_field_03 = ip_address;
-    robot_msg.data_field_04 = firmware_version;
+    robot_msg.data_field_01 = "robot_description: "+robot_description;
+    robot_msg.data_field_02 = "serial_number: "+serial_number;
+    robot_msg.data_field_03 = "ip_address: "+ip_address;
+    robot_msg.data_field_04 = "firmware_version: "+firmware_version;
     /*
     robot_msg.data_field_05 = "-";
     robot_msg.data_field_06 = "-";

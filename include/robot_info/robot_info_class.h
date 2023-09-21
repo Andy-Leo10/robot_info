@@ -20,7 +20,7 @@ protected:
     std::string firmware_version="3.5.8";
     
 
-private:
+protected:
     ros::Publisher robot_pub;
     robotinfo_msgs::RobotInfo10Fields robot_msg;
 };

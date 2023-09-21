@@ -137,7 +137,10 @@ include_directories(
 add_executable(robot_info_node
   src/robot_info_main.cpp
   src/robot_info_class.cpp)
-
+add_executable(agv_robot_info_node
+  src/agv_robot_info_main.cpp
+  src/robot_info_class.cpp
+  src/agv_robot_info_class.cpp)
 ## Rename C++ executable without prefix
 ## The above recommended prefix causes long target names, the following renames the
 ## target back to the shorter version for ease of user use
@@ -153,6 +156,7 @@ add_executable(robot_info_node
 #   ${catkin_LIBRARIES}
 # )
 target_link_libraries(robot_info_node ${catkin_LIBRARIES})
+target_link_libraries(agv_robot_info_node ${catkin_LIBRARIES})
 #############
 ## Install ##
 #############
